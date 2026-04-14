@@ -31,7 +31,6 @@ public class SnakeGame extends JPanel implements ActionListener {
         g.setColor(Color.DARK_GRAY);
         g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
 
-        // рисуем сетку
         g.setColor(Color.white);
         for (int xx = 0; xx <= WIDTH * SCALE; xx += SCALE) {
             g.drawLine(xx, 0, xx, HEIGHT * SCALE);
@@ -39,14 +38,11 @@ public class SnakeGame extends JPanel implements ActionListener {
         for (int yy = 0; yy <= HEIGHT * SCALE; yy += SCALE) {
             g.drawLine(0, yy, WIDTH * SCALE, yy);
         }
-
-        // рисуем змею
         for (int d = 0; d < snake.lengthSnake; d++) {
             g.setColor(Color.GREEN);
             g.fillRect(snake.snakeX[d] * SCALE + 1, snake.snakeY[d] * SCALE + 1, SCALE - 1, SCALE - 1);
         }
 
-        // рисуем яблоко
         g.setColor(Color.red);
         g.fillRect(apple.getPosX() * SCALE + 1, apple.getPosY() * SCALE + 1, SCALE - 1, SCALE - 1);
     }
