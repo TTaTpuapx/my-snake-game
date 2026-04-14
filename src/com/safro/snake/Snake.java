@@ -30,11 +30,9 @@ public class Snake {
             if ((snakeX[0] == snakeX[d]) && (snakeY[0] == snakeY[d])) lengthSnake = d;
         }
 
-        // переход на другую сторону по X
         if (snakeX[0] > SnakeGame.WIDTH - 1) snakeX[0] = 0;
         if (snakeX[0] < 0) snakeX[0] = SnakeGame.WIDTH - 1;
 
-        // переход на другую сторону по Y
         if (snakeY[0] > SnakeGame.HEIGHT - 1) snakeY[0] = 0;
         if (snakeY[0] < 0) snakeY[0] = SnakeGame.HEIGHT - 1;
     }
